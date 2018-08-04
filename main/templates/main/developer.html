@@ -1,0 +1,22 @@
+<!--  Constructs and displays the developer page   -->
+
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    {{ developer.name }}
+{% endblock title %}
+
+{% block content %}
+    <div id="dev-details">
+        <div id="dev-details-header">
+            <p id="dev-name">{{ developer.name }}</p>
+            <p id="dev-title">{{ developer.title }}</p>
+        </div>
+        <div id="dev-q-and-a">
+            {% for QandA in QandAs %}
+                <p><b>Q: </b>{{ QandA.question}}</p>
+                <p><b>A: </b>{{ QandA.answer}}</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,27 @@
+<!--  Constructs and displays the developers page  -->
+
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    Developers
+{% endblock title %}
+
+{% block header-text-id %}
+    id="developers"
+{% endblock header-text-id %}
+
+{% block header-text %}
+    Developers
+{% endblock header-text %}
+
+{% block content %}
+    <div id="developers">
+        {% for developer in developers %}
+            <a >
+                <div class="dev-thumbnail">
+                    <p>{{ developer }}, {{ developer.developer_id }}</p>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock content %}

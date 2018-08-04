@@ -26,11 +26,12 @@ class Developer(models.Model):
 # -------------- Developer Attributes -------------- #
     name = models.CharField("Name", max_length=64)
     title = models.TextField("Title", max_length=128)
+    developer_id = models.CharField("Developer ID", help_text="Please give yourself a unique Developer ID, using 16 characters or fewer.", max_length=16, unique=True)
 
 
 # -------------- Developer Meta Data --------------- #
     class Meta:
-        ordering = ['created_on']
+        ordering = ['developer_id']
 
 # -------------- Developer Functions --------------- #
     def __str__(self):
@@ -38,6 +39,8 @@ class Developer(models.Model):
             return self.name + ", " + self.title
         elif (self.name != ""):
             return self.name
+        elif (self.name != ""):
+            return self.developer_id
         else:
             return "Unknown"
 
@@ -58,7 +61,7 @@ class QandA(models.Model):
 # ---------------- QandA Attributes ---------------- #
     question = models.TextField("Question", max_length=256)
     answer = models.TextField("Answer", max_length=512)
-    developer = models.ForeignKey(Developer, on_delete=models.CASCADE)
+    developer_id = models.CharField("Developer ID", help_text="Please give your unique 16 character developer ID to ensure this QandA is saved to your developer profile.", max_length=16)
 
 # ---------------- QandA Meta Data ----------------- #
     class Meta:
