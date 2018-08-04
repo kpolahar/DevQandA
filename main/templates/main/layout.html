@@ -1,0 +1,41 @@
+<!doctype html>
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>
+            {% block title %}
+            {% endblock title %}
+        </title>
+        {% block css %}
+        {% endblock css %}
+    </head>
+    <body>
+        {% block header %}
+            <header>
+                <div id="main-header"
+                     class="header">
+                </div>
+            </header>
+        {% endblock header %}
+        <content>
+            {% block nav-menu %}
+                <nav id="main-nav-menu"
+                     class="nav-menu">
+                </nav>
+            {% endblock nav-menu %}
+            {% block content %}
+            {% endblock content %}
+        </content>
+        {% block footer %}
+            <footer>
+                <span id="copyright">
+                    &copy; 2018 Kate Polahar
+                </span>
+            </footer>
+        {% endblock footer %}
+    </body>
+</html>
