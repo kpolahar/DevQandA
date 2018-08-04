@@ -34,11 +34,11 @@ class Developer(models.Model):
 
 # -------------- Developer Functions --------------- #
     def __str__(self):
-        if ((self.name != "") && (self.title != ""))
+        if ((self.name != "") and (self.title != "")):
             return self.name + ", " + self.title
-        else if (self.name != "")
+        elif (self.name != ""):
             return self.name
-        else
+        else:
             return "Unknown"
 
 
@@ -66,13 +66,11 @@ class QandA(models.Model):
 
 # ---------------- QandA Functions ----------------- #
     def __str__(self):
-        if ((self.question != "") && (self.answer != ""))
-            return "Q: " + self.question + "\n"
-                   "A: " + self.answer
-        else if (self.question != "")
-            return "Q: " + self.question + "\n"
-                   "A: Unknown"
-        else
+        if ((self.question != "") and (self.answer != "")):
+            return "Q: " + self.question + "\nA: " + self.answer
+        elif (self.question != ""):
+            return "Q: " + self.question + "\nA: Unknown"
+        else:
             return "Unknown"
 
     def printQ(self):
