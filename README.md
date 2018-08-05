@@ -22,4 +22,6 @@ As a developer looking for a job I would like an application that answers common
 
 
 # To Run
-This project is not yet complete. Instructions to run will be included once there is actually a project to be run. ^_^
+
+This project is not yet complete, but you are welcome to take a look at the project files in the meantime.
+I will do my best to post complete instructions on how to run the project even if you do not already have the prerequisites installed as soon as the project is fully functional. ^_^
