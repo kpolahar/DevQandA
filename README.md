@@ -39,7 +39,7 @@ I have broken this user story out into smaller ones more specific to the project
 
 # To Run
 
-###Prerequisites
+### Prerequisites
 
 This project is for the most part complete, for the purpose that it was given to me, though there is much polishing up yet which could be done.
 
