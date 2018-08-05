@@ -1,17 +1,23 @@
 <!--  Constructs and displays the developer page   -->
 
 {% extends 'main/layout.html' %}
+{% load static from staticfiles %}
 
 {% block title %}
     {{ developer.name }}
 {% endblock title %}
 
 {% block content %}
-    <div id="dev-details">
-        <div id="dev-details-header">
-            <p id="dev-name">{{ developer.name }}</p>
-            <p id="dev-title">{{ developer.title }}</p>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container d-flex flex-row justify-content-center align-items-center">
+            <div class= "mx-5 pt-1">
+                <h1 class="display-4">Meet {{ developer.first_name }}</h1>
+                <p class="lead pl-1 font-italic">{{ developer.title }}</p>
+            </div>
+            <img class="mx-5" src="{% static 'images/' %}{{ developer.developer_id }}.png" style="height: 200px; width: 200px;"/>
         </div>
+    </div>
+    <div id="dev-details">
         <div id="dev-q-and-a">
             {% for QandA in QandAs %}
                 <p><b>Q: </b>{{ QandA.question}}</p>

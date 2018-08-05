@@ -4,6 +4,7 @@
 
 # -------------------- Imports --------------------- #
 from django.db import models
+from datetime import datetime
 
 
 # ================================================== #
@@ -24,9 +25,11 @@ class Developer(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
 # -------------- Developer Attributes -------------- #
-    name = models.CharField("Name", max_length=64)
-    title = models.TextField("Title", max_length=128)
-    developer_id = models.CharField("Developer ID", help_text="Please give yourself a unique Developer ID, using 16 characters or fewer.", max_length=16, unique=True)
+    first_name = models.CharField("First Name", blank=True, max_length=32)
+    last_name = models.CharField("Last Name", blank=True, max_length=32)
+    name = models.CharField("Name", blank=True, max_length=65)
+    title = models.TextField("Title", blank=True, max_length=128)
+    developer_id = models.CharField("Developer ID", default=datetime.now, help_text="Please give yourself a unique Developer ID, using 16 characters or fewer.", max_length=16, unique=True)
 
 
 # -------------- Developer Meta Data --------------- #
@@ -59,9 +62,10 @@ class QandA(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
 # ---------------- QandA Attributes ---------------- #
-    question = models.TextField("Question", max_length=256)
-    answer = models.TextField("Answer", max_length=512)
-    developer_id = models.CharField("Developer ID", help_text="Please give your unique 16 character developer ID to ensure this QandA is saved to your developer profile.", max_length=16)
+    question = models.TextField("Question", blank=True, max_length=256)
+    answer = models.TextField("Answer", blank=True, max_length=512)
+    qanda_id = models.CharField("QandA ID", default=datetime.now, help_text="Please give this a unique QandA ID, using 16 characters or fewer.", max_length=16, unique=True)
+    developer_id = models.CharField("Developer ID", blank=True, help_text="Please give your unique 16 character developer ID to ensure this QandA is saved to your developer profile.", max_length=16)
 
 # ---------------- QandA Meta Data ----------------- #
     class Meta:

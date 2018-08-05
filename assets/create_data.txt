@@ -1,0 +1,60 @@
+from main.models import *
+
+Kate = Developer()
+Kate.first_name = "Kate"
+Kate.last_name = "Polahar"
+Kate.name = "Kate Polahar"
+Kate.title = "Web Developer and Designer"
+Kate.developer_id = "kpolahar"
+Kate.save()
+
+QandA1 = QandA()
+QandA1.question = "What is your favorite programming language, and why?"
+QandA1.answer = "Python. Because it's the one that helped me discover who I really am. When it comes to programming languages, Python will always always be my first love."
+QandA1.developer_id = "kpolahar"
+QandA1.qanda_id = "qanda1"
+QandA1.save()
+
+QandA2 = QandA()
+QandA2.question = "Tabs or spaces, and why?"
+QandA2.answer = "I often find myself inputting via tabs, for speed. But I have all of my text editors set to convert tabs to spaces and to display all white space and indentation as spaces, for the sake of consistency, because that is what I find to be most visually appealing and most easy to read."
+QandA2.developer_id = "kpolahar"
+QandA2.qanda_id = "qanda2"
+QandA2.save()
+
+QandA3 = QandA()
+QandA3.question = "Do you have a Stack Overflow account?"
+QandA3.answer = "How does one survive college, much less the real world, as a developer without a Stack Overflow account? Of course I do!"
+QandA3.developer_id = "kpolahar"
+QandA3.qanda_id = "qanda3"
+QandA3.save()
+
+QandA4 = QandA()
+QandA4.question = "What does JSON stand for?"
+QandA4.answer = "JavaScript Object Notation. No, of course I didn't just Google that to double check myself. Because having grown up as an air force brat, I am excellent at everything involving acronyms."
+QandA4.developer_id = "kpolahar"
+QandA4.qanda_id = "qanda4"
+QandA4.save()
+
+Penny = Developer()
+Penny.first_name = "Penny"
+Penny.last_name = "Polahar"
+Penny.name = "Penny Polahar"
+Penny.title = "Developer Assistant"
+Penny.developer_id = "pennyroyal"
+Penny.save()
+
+PennyQandA1 = QandA()
+PennyQandA1.question = "How are you so cute?"
+PennyQandA1.answer = "Nobody knows. Kate says I break the physics with my cuteness."
+PennyQandA1.developer_id = "pennyroyal"
+PennyQandA1.qanda_id = "pennyqanda1"
+PennyQandA1.save()
+
+PennyQandA2 = QandA()
+PennyQandA2.question = "What is your favorite toy?"
+PennyQandA2.answer = "My ball. No...my antler...Hey! Squirrel! Get out of my tree!"
+PennyQandA2.developer_id = "pennyroyal"
+PennyQandA2.qanda_id = "pennyqanda2"
+PennyQandA2.save()
+
