@@ -16,7 +16,13 @@
 {% endblock header-text %}
 
 {% block content %}
-    <div id="developers" class="container m-5">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="d-flex flex-column align-items-center text-center mx-5 pt-1">
+                <h1 class="display-4 mb-4">Awesome Developers Currently Available For Hire</h1>
+                <p class="lead pl-1 font-italic">Select from the list below to learn more about one of these clever developers. Or go exploring in the source code, if you're brave enough.</p>
+        </div>
+    </div>
+    <div id="developers" class="d-flex flex-column align-items-center m-5">
         {% for developer in developers %}
             {% if developer.developer_id != "pennyroyal" %}
                 <a class="m-3" href={% developer_url developer %}>

@@ -9,17 +9,13 @@
 
 {% block content %}
     <div class="jumbotron jumbotron-fluid">
-        <div class="container d-flex flex-row justify-content-center align-items-center">
-            <div class= "mx-5 pt-1">
-                <h1 class="display-4">Awesome Landing Page Goes Here</h1>
+        <div class="d-flex flex-column align-items-center text-center mx-5 pt-1">
+                <h1 class="display-4 mb-4">Really Fantastic Landing Page Goes Here</h1>
                 <p class="lead pl-1 font-italic">
-                    But for now, click
-                     <a href={% developers_url %}>
-                       here
-                    </a>
-                    to learn more about the clever dev who built this site (and any other devs who may have been added to the database)
-                  </p>
-            </div>
+                  But for now, click
+                  <a href={% developers_url %}>here</a>
+                  to learn more about the clever developer who built this site (and any other devs who may have been added to the database)
+                </p>
         </div>
     </div>
 {% endblock content %}
