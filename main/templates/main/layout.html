@@ -13,12 +13,6 @@
             {% endblock title %}
         </title>
 
-        <!-- Direct Link to Bootstrap
-        <link rel="stylesheet"
-              href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-              integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-              crossorigin="anonymous"/> -->
-
         <!-- Local Custom Bootstrap -->
         <link rel="stylesheet"
               href="{% static 'stylesheets/css/bootstrap.css' %}">
@@ -34,20 +28,8 @@
             </header>
         {% endblock header %}
         <content>
-            {% block nav-menu %}
-                <nav id="main-nav-menu"
-                     class="nav-menu">
-                </nav>
-            {% endblock nav-menu %}
             {% block content %}
             {% endblock content %}
         </content>
-        {% block footer %}
-            <footer>
-                <span id="copyright">
-                    &copy; 2018 Kate Polahar
-                </span>
-            </footer>
-        {% endblock footer %}
     </body>
 </html>

@@ -29,6 +29,8 @@ class Developer(models.Model):
     last_name = models.CharField("Last Name", blank=True, max_length=32)
     name = models.CharField("Name", blank=True, max_length=65)
     title = models.TextField("Title", blank=True, max_length=128)
+    github = models.CharField("GitHub UserName", blank=True, max_length=32)
+    linkedin = models.CharField("LinkedIn UserName", blank=True, max_length=32)
     developer_id = models.CharField("Developer ID", default=datetime.now, help_text="Please give yourself a unique Developer ID, using 16 characters or fewer.", max_length=16, unique=True)
 
 

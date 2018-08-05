@@ -6,6 +6,8 @@ Kate.last_name = "Polahar"
 Kate.name = "Kate Polahar"
 Kate.title = "Web Developer and Designer"
 Kate.developer_id = "kpolahar"
+Kate.linkedin = "kpolahar"
+Kate.github = "kpolahar"
 Kate.save()
 
 QandA1 = QandA()
@@ -36,6 +38,20 @@ QandA4.developer_id = "kpolahar"
 QandA4.qanda_id = "qanda4"
 QandA4.save()
 
+QandA5 = QandA()
+QandA5.question = "What do you love about working with SASS?"
+QandA5.answer = "You should ask me during my interview, assuming you're up for a good front-end nerd conversation."
+QandA5.developer_id = "kpolahar"
+QandA5.qanda_id = "qanda5"
+QandA5.save()
+
+QandA6 = QandA()
+QandA6.question = "Have you ever worked with artificial neural networks?"
+QandA6.answer = "I have, and if you've ever worked with optical character recognition, we could probably have a great conversation about it."
+QandA6.developer_id = "kpolahar"
+QandA6.qanda_id = "qanda6"
+QandA6.save()
+
 Penny = Developer()
 Penny.first_name = "Penny"
 Penny.last_name = "Polahar"
@@ -45,16 +61,30 @@ Penny.developer_id = "pennyroyal"
 Penny.save()
 
 PennyQandA1 = QandA()
-PennyQandA1.question = "How are you so cute?"
-PennyQandA1.answer = "Nobody knows. Kate says I break the physics with my cuteness."
+PennyQandA1.question = "What are your qualifications for this position?"
+PennyQandA1.answer = "I am an incredibly dedicated bug hunter."
 PennyQandA1.developer_id = "pennyroyal"
 PennyQandA1.qanda_id = "pennyqanda1"
 PennyQandA1.save()
 
 PennyQandA2 = QandA()
-PennyQandA2.question = "What is your favorite toy?"
-PennyQandA2.answer = "My ball. No...my antler...Hey! Squirrel! Get out of my tree!"
+PennyQandA2.question = "How are you so cute?"
+PennyQandA2.answer = "Nobody knows. Kate says I break the physics with my cuteness."
 PennyQandA2.developer_id = "pennyroyal"
 PennyQandA2.qanda_id = "pennyqanda2"
 PennyQandA2.save()
+
+PennyQandA3 = QandA()
+PennyQandA3.question = "What is your favorite toy?"
+PennyQandA3.answer = "My ball. No...my antler...Hey! Squirrel! Get out of my tree!"
+PennyQandA3.developer_id = "pennyroyal"
+PennyQandA3.qanda_id = "pennyqanda3"
+PennyQandA3.save()
+
+PennyQandA4 = QandA()
+PennyQandA4.question = "How do you tell the difference between a bark-worthy threat and a non-bark-worthy threat?"
+PennyQandA4.answer = "All threats require barks. Kate must know of all potential impending danger. Especially bunnies. I just know they're up to something devious."
+PennyQandA4.developer_id = "pennyroyal"
+PennyQandA4.qanda_id = "pennyqanda4"
+PennyQandA4.save()
 

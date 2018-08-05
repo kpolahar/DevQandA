@@ -1,6 +1,7 @@
 <!--  Constructs and displays the developers page  -->
 
 {% extends 'main/layout.html' %}
+{% load custom_tags %}
 
 {% block title %}
     Developers
@@ -15,13 +16,15 @@
 {% endblock header-text %}
 
 {% block content %}
-    <div id="developers">
+    <div id="developers" class="container m-5">
         {% for developer in developers %}
-            <a >
-                <div class="dev-thumbnail">
-                    <p>{{ developer }}, {{ developer.developer_id }}</p>
-                </div>
-            </a>
+            {% if developer.developer_id != "pennyroyal" %}
+                <a class="m-3" href={% developer_url developer %}>
+                    <div class="dev-thumbnail">
+                        <p>{{ developer }}, {{ developer.developer_id }}</p>
+                    </div>
+                </a>
+            {% endif %}
         {% endfor %}
     </div>
 {% endblock content %}

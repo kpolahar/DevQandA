@@ -2,6 +2,7 @@
 
 {% extends 'main/layout.html' %}
 {% load static from staticfiles %}
+{% load custom_tags %}
 
 {% block title %}
     {{ developer.name }}
@@ -17,11 +18,21 @@
             <img class="mx-5" src="{% static 'images/' %}{{ developer.developer_id }}.png" style="height: 200px; width: 200px;"/>
         </div>
     </div>
-    <div id="dev-details">
-        <div id="dev-q-and-a">
+    <div id="dev-details" class="container m-5">
+        <div class="d-flex row align-items-center px-5 mb-5">
+            <div class="m-2" style="width: 400px !important;">
+                {% github developer %}
+            </div>
+            <div class="m-2" style="width: 400px !important;">
+                {% linkedin developer %}
+            </div>
+        </div>
+        <div id="dev-q-and-a-div">
             {% for QandA in QandAs %}
-                <p><b>Q: </b>{{ QandA.question}}</p>
-                <p><b>A: </b>{{ QandA.answer}}</p>
+                <div id="q-and-a" class="mb-5">
+                    <p><b>Q: </b>{{ QandA.question}}</p>
+                    <p><b>A: </b>{{ QandA.answer}}</p>
+                </div>
             {% endfor %}
         </div>
     </div>
