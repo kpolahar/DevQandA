@@ -43,18 +43,46 @@ I have broken this user story out into smaller ones more specific to the project
 
 This project is for the most part complete, for the purpose that it was given to me, though there is much polishing up yet which could be done.
 
-I will do my best to post more thorough instructions on how to run the project even if you do not already have the prerequisites installed as soon as I have an opportunity to borrow a computer which does not already have them installed. All of the instructions I have managed to find by Googling seem to make the assumption that you are building the project yourself, and I wish to post more complete instructions for those who are taking this project which is already built and attempting to run it on a system which does not yet have the prerequisite software installed. Unfortunately, my only computer which did not has been loaned out to a friend who is taking a class on Linux system administration, and was thrilled to find I had a laptop with Ubuntu just lying around that she could borrow for a few weeks...
-
-For the more tech savvy, the following instructions should hopefully suffice. If not, please do feel free to contact me for a chat to help you set it up. I would have hosted it on my website, but my site is down because I'm in the middle of changing hosting providers, partially because my current hosting service claimed to support Django, but only supported older versions of Django...
-
-So. With no further ado...
-
-Python 2.7 or later
-Django 1.11.15 or later
 Git
+Python 2.7 or later
+Pip (upgrade from default installed with Python is recommended)
+7Zip (or a similar program, to extract the Django files)
+Django 1.11.15 or later
 
-You may need to install pip to install one or both of these.
-I will hopefully have more precise instructions for installing these posted later today.
+##### To Install Git
+
+Git provides an excellent guide on getting started and installing Git on their site, which can be found [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
+##### To Install Python
+
+You only need Python 2.7 or later to run this project. I have not tried running it with Python 3.X or later yet, and I am not positive if it is compatible or not. I will attempt to find out for sure when I have time and post an update here.
+
+I found a handly little guide for installing Python 2.7 on Google's Open Online Education site. It includes detailed instructions for ensuring that the Python executable is added to the Path. This guide can be found [here](https://edu.google.com/openonline/course-builder/docs/1.10/set-up-course-builder/check-for-python.html).
+
+##### To Upgrade Pip
+
+Assuming you have Python installed, it is recommended that you upgrade pip before attempting to use it to install Django.
+
+ - On Linux or macOS
+     pip install -U pip
+ - On Windows
+     python -m pip install -U pip
+
+For more help with pip, see their documentation [here](https://pip.pypa.io/en/stable/installing/#upgrading-pip).
+
+##### To Install Django
+
+Once you have Python installed and pip up to date, you'll want to install Django. Again, you'll notice we're not working with the latest version of Django. I'll try to come back and see if this plays nicely with the latest version later. For now, here are instructions for installing version 1.11.15, which is sufficient to run this program locally on your machine.
+
+ - Click [here](https://www.djangoproject.com/download/1.11.15/tarball/) to download the file 'Django-1.11.15.tar.gz'
+ - You will probably need to click [here](https://www.7-zip.org/) to install 7Zip to extract the files after it downloads
+ - For those as easily confused as myself, you may need to extract the files twice, once for the gz layer, and once for the tar layer
+ - Rename the 'dist' folder to 'Django' and move it to your program files folder
+ - In the commmand line, navigate to the program files folder and run the following command
+ - python -m pip install -e django/
+
+You should now have everything you need installed to run the site. If you have any issues, please feel free to email me at *kpolahar@gmail.com*.
+
 
 ### Running the Site
 
