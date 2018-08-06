@@ -49,17 +49,17 @@ Pip (upgrade from default installed with Python is recommended)
 7Zip (or a similar program, to extract the Django files)
 Django 1.11.15 or later
 
-##### To Install Git
+#### To Install Git
 
 Git provides an excellent guide on getting started and installing Git on their site, which can be found [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-##### To Install Python
+#### To Install Python
 
 You only need Python 2.7 or later to run this project. I have not tried running it with Python 3.X or later yet, and I am not positive if it is compatible or not. I will attempt to find out for sure when I have time and post an update here.
 
 I found a handly little guide for installing Python 2.7 on Google's Open Online Education site. It includes detailed instructions for ensuring that the Python executable is added to the Path. This guide can be found [here](https://edu.google.com/openonline/course-builder/docs/1.10/set-up-course-builder/check-for-python.html).
 
-##### To Upgrade Pip
+#### To Upgrade Pip
 
 Assuming you have Python installed, it is recommended that you upgrade pip before attempting to use it to install Django.
 
@@ -70,7 +70,7 @@ Assuming you have Python installed, it is recommended that you upgrade pip befor
 
 For more help with pip, see their documentation [here](https://pip.pypa.io/en/stable/installing/#upgrading-pip).
 
-##### To Install Django
+#### To Install Django
 
 Once you have Python installed and pip up to date, you'll want to install Django. Again, you'll notice we're not working with the latest version of Django. I'll try to come back and see if this plays nicely with the latest version later. For now, here are instructions for installing version 1.11.15, which is sufficient to run this program locally on your machine.
 
